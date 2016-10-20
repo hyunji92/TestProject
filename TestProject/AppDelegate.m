@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "Tab1ViewController.h"
+#import "Tab2ViewController.h"
+#import "Tab3ViewController.h"
+#import "Tab4ViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -22,10 +26,18 @@
     NSLog(@"application:   >>> 앱 시작점");
     self.window =  [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-//    Tab1ViewController *tab1viewController = [[Tab1ViewController alloc] init];
-//    self.window.rootViewController = tab1viewController;
+
+     Tab1ViewController *tab1viewController = [[Tab1ViewController alloc] initWithTag:0];
+     self.window.rootViewController = tab1viewController;
+    // tabBarController 생성 전에 rootViewController
     
-    self.tabBarController =  [[UITabBarController alloc] init];
+    // ViewController를 4개로 하여 만든다 .
+    //Tab2ViewController *tab2viewController = [[Tab2ViewController alloc]  initWithTag:1];
+    //tab2viewController.view.backgroundColor = [UIColor grayColor];
+    
+    
+    
+    /*self.tabBarController =  [[UITabBarController alloc] init];
     for (int i =0; i <4; i++) {
         Tab1ViewController *tab1viewController = [[Tab1ViewController alloc] initWithTag:i];
     
@@ -35,8 +47,7 @@
     
 
     }
-    self.window.rootViewController = tabBarController;
-    
+    self.window.rootViewController = tabBarController;*/
     
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor redColor];
