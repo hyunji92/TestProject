@@ -39,19 +39,22 @@
         case 0:
             self.view.backgroundColor = [UIColor grayColor];
             break;
-        case 1:
-            self.view.backgroundColor = [UIColor yellowColor];
-            break;
-        case 2:
-            self.view.backgroundColor = [UIColor blueColor];
-            break;
-        case 3:
-            self.view.backgroundColor = [UIColor magentaColor];
-            break;
-            
+//        case 1:
+//            self.view.backgroundColor = [UIColor yellowColor];
+//            break;
+//        case 2:
+//            self.view.backgroundColor = [UIColor blueColor];
+//            break;
+//        case 3:
+//            self.view.backgroundColor = [UIColor magentaColor];
+//            break;
+//            
         default:
             break;
     }
+    
+    [self stringTest];
+    
     
     NSLog(@"viewWillAppear:  >>> 뷰가 나타나기 바로 직전 ");
 }
@@ -85,5 +88,67 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void) stringTest {
+    
+    NSString *str = @"1,2,3,4,5,6,7,8,9,10";
+    
+    NSString *temp1 = [str substringFromIndex:4];
+    NSLog(@"temp1 %@",temp1);
+    
+    NSString *temp2 = [str substringToIndex:4];
+    NSLog(@"temp2 %@",temp2);
+    
+    NSString *temp3 = [str substringWithRange:NSMakeRange(8, 1)];
+    NSLog(@"temp3 %@",temp3);
+    
+    NSInteger temp3_1 = [temp3 integerValue];
+    NSLog(@"temp3_1  %ld",(long)temp3_1);
+    
+    NSInteger temp3_2 = [temp3 floatValue];
+    NSLog(@"temp3_2  %f",(float)temp3_2);
+    
+    NSInteger temp3_3 = [temp3 longLongValue];
+    NSLog(@"temp3_3  %ld",temp3_3);
+    
+    NSString *temp4 = [str stringByReplacingOccurrencesOfString:@"," withString:@"/"];
+    NSLog(@"temp4 %@", temp4);
+    
+    NSArray *temp5 = [temp4 componentsSeparatedByString:@"/"];
+    NSLog(@"temp5 : %@", temp5);
+    
+    if([str isEqualToString:@"1,2,3,4,5,6,7,8,9,10"]){
+        NSLog(@"같다");
+    }
+    
+    if([str hasPrefix:@"1"]){
+        NSLog(@"앞이 같다");
+    }
+    
+    if([str hasSuffix:@"10"]){
+        NSLog(@"뒤가 같다");
+    }
+    
+    if([str containsString:@"5"]){
+        NSLog(@"5가 포함되어있다.");
+    }
+    
+    int sum = 0;
+    for (int i =0; i < [temp5 count]; i++) {
+        
+        sum += [[temp5 objectAtIndex:i] integerValue];
+        
+    }
+    NSLog(@"array test :  %d" , sum);
+    
+}
+
+- (void) arrayTest{
+    
+}
+
+- (void) dictionaryTest{
+    
+}
 
 @end

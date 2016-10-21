@@ -15,6 +15,12 @@
 		26C977051DB87F2B006CCD66 /* TestProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C977041DB87F2B006CCD66 /* TestProjectUITests.m */; };
 		26C977151DB88342006CCD66 /* Tab1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C977131DB88342006CCD66 /* Tab1ViewController.m */; };
 		26C977161DB88342006CCD66 /* Tab1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C977141DB88342006CCD66 /* Tab1ViewController.xib */; };
+		26C9771D1DB8B610006CCD66 /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9771B1DB8B610006CCD66 /* Tab2ViewController.m */; };
+		26C9771E1DB8B610006CCD66 /* Tab2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C9771C1DB8B610006CCD66 /* Tab2ViewController.xib */; };
+		26C977221DB8B622006CCD66 /* Tab3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C977201DB8B622006CCD66 /* Tab3ViewController.m */; };
+		26C977231DB8B622006CCD66 /* Tab3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C977211DB8B622006CCD66 /* Tab3ViewController.xib */; };
+		26C9772A1DB8B694006CCD66 /* Tab4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C977281DB8B694006CCD66 /* Tab4ViewController.m */; };
+		26C9772B1DB8B694006CCD66 /* Tab4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C977291DB8B694006CCD66 /* Tab4ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,15 @@
 		26C977131DB88342006CCD66 /* Tab1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab1ViewController.m; path = ../Tab1ViewController.m; sourceTree = "<group>"; };
 		26C977141DB88342006CCD66 /* Tab1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab1ViewController.xib; path = ../Tab1ViewController.xib; sourceTree = "<group>"; };
 		26C977171DB8838D006CCD66 /* testProject.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testProject.pch; sourceTree = "<group>"; };
+		26C9771A1DB8B610006CCD66 /* Tab2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab2ViewController.h; sourceTree = "<group>"; };
+		26C9771B1DB8B610006CCD66 /* Tab2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab2ViewController.m; sourceTree = "<group>"; };
+		26C9771C1DB8B610006CCD66 /* Tab2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tab2ViewController.xib; sourceTree = "<group>"; };
+		26C9771F1DB8B622006CCD66 /* Tab3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab3ViewController.h; sourceTree = "<group>"; };
+		26C977201DB8B622006CCD66 /* Tab3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab3ViewController.m; sourceTree = "<group>"; };
+		26C977211DB8B622006CCD66 /* Tab3ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tab3ViewController.xib; sourceTree = "<group>"; };
+		26C977271DB8B694006CCD66 /* Tab4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab4ViewController.h; sourceTree = "<group>"; };
+		26C977281DB8B694006CCD66 /* Tab4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab4ViewController.m; sourceTree = "<group>"; };
+		26C977291DB8B694006CCD66 /* Tab4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tab4ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +161,15 @@
 				26C977121DB88342006CCD66 /* Tab1ViewController.h */,
 				26C977131DB88342006CCD66 /* Tab1ViewController.m */,
 				26C977141DB88342006CCD66 /* Tab1ViewController.xib */,
+				26C9771A1DB8B610006CCD66 /* Tab2ViewController.h */,
+				26C9771B1DB8B610006CCD66 /* Tab2ViewController.m */,
+				26C9771C1DB8B610006CCD66 /* Tab2ViewController.xib */,
+				26C9771F1DB8B622006CCD66 /* Tab3ViewController.h */,
+				26C977201DB8B622006CCD66 /* Tab3ViewController.m */,
+				26C977211DB8B622006CCD66 /* Tab3ViewController.xib */,
+				26C977271DB8B694006CCD66 /* Tab4ViewController.h */,
+				26C977281DB8B694006CCD66 /* Tab4ViewController.m */,
+				26C977291DB8B694006CCD66 /* Tab4ViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -258,7 +282,10 @@
 			files = (
 				26C976EF1DB87F2B006CCD66 /* LaunchScreen.storyboard in Resources */,
 				26C976EC1DB87F2B006CCD66 /* Assets.xcassets in Resources */,
+				26C977231DB8B622006CCD66 /* Tab3ViewController.xib in Resources */,
+				26C9772B1DB8B694006CCD66 /* Tab4ViewController.xib in Resources */,
 				26C977161DB88342006CCD66 /* Tab1ViewController.xib in Resources */,
+				26C9771E1DB8B610006CCD66 /* Tab2ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C977151DB88342006CCD66 /* Tab1ViewController.m in Sources */,
+				26C977221DB8B622006CCD66 /* Tab3ViewController.m in Sources */,
 				26C976E41DB87F2B006CCD66 /* AppDelegate.m in Sources */,
+				26C9772A1DB8B694006CCD66 /* Tab4ViewController.m in Sources */,
 				26C976E11DB87F2B006CCD66 /* main.m in Sources */,
+				26C9771D1DB8B610006CCD66 /* Tab2ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +543,7 @@
 				26C9770B1DB87F2B006CCD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26C9770C1DB87F2B006CCD66 /* Build configuration list for PBXNativeTarget "TestProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +552,7 @@
 				26C9770E1DB87F2B006CCD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26C9770F1DB87F2B006CCD66 /* Build configuration list for PBXNativeTarget "TestProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +561,7 @@
 				26C977111DB87F2B006CCD66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
