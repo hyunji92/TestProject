@@ -8,15 +8,29 @@
 
 #import "Tab3ViewController.h"
 
-@interface Tab3ViewController ()
+@interface Tab3ViewController (){
+    NSInteger currentTag;
+    IBOutlet UILabel *test3;
+}
 
 @end
 
 @implementation Tab3ViewController
 
+- (id)initWithTag:(NSInteger) tag{
+    self =  [super init];
+    if(self){
+        currentTag = tag;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    test3.text = [NSString stringWithFormat:@"%ld",(long)currentTag];
+    
+    self.view.backgroundColor = [UIColor yellowColor];
+
 }
 
 - (void)didReceiveMemoryWarning {

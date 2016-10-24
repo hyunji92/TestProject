@@ -26,15 +26,30 @@
     NSLog(@"application:   >>> 앱 시작점");
     self.window =  [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-
-     Tab1ViewController *tab1viewController = [[Tab1ViewController alloc] initWithTag:0];
-     self.window.rootViewController = tab1viewController;
-    // tabBarController 생성 전에 rootViewController
+    Tab1ViewController *tab1viewController = [[Tab1ViewController alloc] initWithTag:0];
+    //self.window.rootViewController = tab1viewController; // tabBarController 생성 전에 rootViewController
+    
+    self.tabBarController =  [[UITabBarController alloc] init];
+   
+    UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:tab1viewController];
+    navigationViewController.tabBarItem =  [[UITabBarItem alloc] initWithTitle:[NSString stringWithFormat:@"%d", 0] image:nil tag:0];
+    [self.tabBarController addChildViewController:navigationViewController];
     
     // ViewController를 4개로 하여 만든다 .
-    //Tab2ViewController *tab2viewController = [[Tab2ViewController alloc]  initWithTag:1];
-    //tab2viewController.view.backgroundColor = [UIColor grayColor];
+    Tab2ViewController *tab2viewController = [[Tab2ViewController alloc]  initWithTag:1];
+    UINavigationController *navigationViewController2 = [[UINavigationController alloc] initWithRootViewController:tab2viewController];
+    navigationViewController2.tabBarItem =  [[UITabBarItem alloc] initWithTitle:[NSString stringWithFormat:@"%d", 1] image:nil tag:1];
+    [self.tabBarController addChildViewController:navigationViewController2];
     
+    Tab3ViewController *tab3viewController = [[Tab3ViewController alloc]  initWithTag:2];
+    UINavigationController *navigationViewController3 = [[UINavigationController alloc] initWithRootViewController:tab3viewController];
+    navigationViewController3.tabBarItem =  [[UITabBarItem alloc] initWithTitle:[NSString stringWithFormat:@"%d", 2] image:nil tag:2];
+    [self.tabBarController addChildViewController:navigationViewController3];
+    
+    Tab4ViewController *tab4viewController = [[Tab4ViewController alloc]  initWithTag:3];
+    UINavigationController *navigationViewController4 = [[UINavigationController alloc] initWithRootViewController:tab4viewController];
+    navigationViewController4.tabBarItem =  [[UITabBarItem alloc] initWithTitle:[NSString stringWithFormat:@"%d", 3] image:nil tag:3];
+    [self.tabBarController addChildViewController:navigationViewController4];
     
     
     /*self.tabBarController =  [[UITabBarController alloc] init];
@@ -48,6 +63,7 @@
 
     }
     self.window.rootViewController = tabBarController;*/
+    self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
     self.window.backgroundColor = [UIColor redColor];

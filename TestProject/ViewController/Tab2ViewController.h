@@ -10,4 +10,9 @@
 
 @interface Tab2ViewController : UIViewController
 
+@property (strong, nonatomic, readonly) NSString *string;
+@property NSInteger integer; // (weak, nonatomic)
+
+- (id)initWithTag:(NSInteger) tag;
+
 @end

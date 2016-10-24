@@ -8,21 +8,57 @@
 
 #import "Tab2ViewController.h"
 
-@interface Tab2ViewController ()
+@interface Tab2ViewController (){
+    NSInteger currentTag;
+    IBOutlet UILabel *test2;
+    
+    IBOutlet UIButton *button1;
+    IBOutlet UIButton *button2;
+    IBOutlet UIButton *button3;
+    
+}
 
 @end
 
 @implementation Tab2ViewController
 
+- (id)initWithTag:(NSInteger) tag{
+    self =  [super init];
+    if(self){
+        currentTag = tag;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    test2.text = [NSString stringWithFormat:@"%ld",(long)currentTag];
+   
+    self.view.backgroundColor = [UIColor lightGrayColor];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
+
+- (IBAction)clickButton:(id)sender{
+    
+    UIButton *btn =(UIButton *)sender;
+    NSLog(@"click!!!!  TAG  :  %ld" , (long)btn.tag);
+    
+    if (btn == button1) {
+        NSLog(@"button1");
+    }else if (btn == button2){
+        NSLog(@"button2");
+    }else if (btn == button3){
+        NSLog(@"button3");
+    }
+    
+}
+
+
 
 /*
 #pragma mark - Navigation

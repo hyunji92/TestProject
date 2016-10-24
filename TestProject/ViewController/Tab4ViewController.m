@@ -8,15 +8,29 @@
 
 #import "Tab4ViewController.h"
 
-@interface Tab4ViewController ()
+@interface Tab4ViewController (){
+    NSInteger currentTag;
+    IBOutlet UILabel *test4;
+}
 
 @end
 
 @implementation Tab4ViewController
 
+- (id)initWithTag:(NSInteger) tag{
+    self =  [super init];
+    if(self){
+        currentTag = tag;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    test4.text = [NSString stringWithFormat:@"%ld",(long)currentTag];
+    
+    self.view.backgroundColor = [UIColor magentaColor];
+
 }
 
 - (void)didReceiveMemoryWarning {
