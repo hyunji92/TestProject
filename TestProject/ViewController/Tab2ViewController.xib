@@ -8,9 +8,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Tab2ViewController">
             <connections>
+<<<<<<< HEAD
                 <outlet property="button1" destination="btb-Ow-giB" id="JUE-LO-uf4"/>
                 <outlet property="button2" destination="GZJ-18-SWX" id="9JW-IX-tGJ"/>
                 <outlet property="button3" destination="VBE-lD-hoF" id="6Zk-h6-Nv7"/>
+=======
+>>>>>>> 288bddd36afa2fba2531b1ded007f4da82c65af4
                 <outlet property="test2" destination="t8j-SX-VQC" id="f9q-f2-xo6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,6 +30,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+<<<<<<< HEAD
                 <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btb-Ow-giB">
                     <frame key="frameInset" minX="16" minY="92" width="63" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -61,6 +65,10 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="35.5" y="53.5"/>
+=======
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+>>>>>>> 288bddd36afa2fba2531b1ded007f4da82c65af4
         </view>
     </objects>
 </document>

@@ -54,8 +54,11 @@
     }
     
     [self stringTest];
+<<<<<<< HEAD
     [self arrayTest];
     [self dictionaryTest];
+=======
+>>>>>>> 288bddd36afa2fba2531b1ded007f4da82c65af4
     
     
     NSLog(@"viewWillAppear:  >>> 뷰가 나타나기 바로 직전 ");
@@ -143,6 +146,7 @@
     }
     NSLog(@"array test :  %d" , sum);
     
+<<<<<<< HEAD
     
     // MutableString
     
@@ -191,10 +195,16 @@
     [mutableArray removeObjectAtIndex:3];
     [mutableArray insertObject:@"new >>> 3" atIndex:3];
     NSLog(@"Check Mutable Array >>>  %@ " , [mutableArray objectAtIndex:3]);
+=======
+}
+
+- (void) arrayTest{
+>>>>>>> 288bddd36afa2fba2531b1ded007f4da82c65af4
     
 }
 
 - (void) dictionaryTest{
+<<<<<<< HEAD
 //    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
 //                                @"test1",@"key1"
 //                                @"test2",@"key2"
@@ -218,6 +228,8 @@
         NSLog(@"Check Mutable Dictionary >>>> :  %@ ", [mutableDictionary objectForKey:[NSString stringWithFormat:@"k%ld",(long)j]]);
     }
     
+=======
+>>>>>>> 288bddd36afa2fba2531b1ded007f4da82c65af4
     
 }
 

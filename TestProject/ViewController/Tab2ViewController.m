@@ -16,6 +16,7 @@
     IBOutlet UIButton *button2;
     IBOutlet UIButton *button3;
     
+
 }
 
 @end
@@ -34,13 +35,15 @@
     [super viewDidLoad];
     test2.text = [NSString stringWithFormat:@"%ld",(long)currentTag];
    
+
     self.view.backgroundColor = [UIColor lightGrayColor];
+
 
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
+
 }
 
 - (IBAction)clickButton:(id)sender{
@@ -57,8 +60,6 @@
     }
     
 }
-
-
 
 /*
 #pragma mark - Navigation
