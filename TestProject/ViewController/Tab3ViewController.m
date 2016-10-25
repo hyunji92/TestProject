@@ -7,11 +7,16 @@
 //
 
 #import "Tab3ViewController.h"
+#import "TestTableViewCell.h"
 
-@interface Tab3ViewController (){
+@interface Tab3ViewController ()<UITableViewDelegate, UITableViewDataSource>{
     NSInteger currentTag;
-    IBOutlet UILabel *test3;
+    
+    IBOutlet UITableView *mainTableView;
+    
 }
+
+@property (strong, nonatomic) NSMutableArray *items;
 
 @end
 
@@ -27,9 +32,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    test3.text = [NSString stringWithFormat:@"%ld",(long)currentTag];
+    //test3.text = [NSString stringWithFormat:@"%ld",(long)currentTag];
     
     self.view.backgroundColor = [UIColor yellowColor];
+    
+    mainTableView.delegate = self;
+    mainTableView.dataSource = self;
 
 }
 
@@ -38,14 +46,67 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) makeDummyData{
+    self.items  = [[NSMutableArray alloc] init];
+    for (int i =0 ; i < 20 ; i++) {
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+        NSString *title = [NSString stringWithFormat:@"타이틀 테스트 입니다  :  %d" , i];
+        [dic setObject:title forKey:@"title"];
+        [self.items addObject:dic];
+    }
 }
-*/
+
+#pragma mark === Datasource
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return self.items.count;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    return 0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 70;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    UITableViewCell *cell =  [[UITableViewCell alloc]init];
+//    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
+    
+    TestTableViewCell *cell = (TestTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TestTableViewCell"];
+    if(cell == nil){
+        NSArray *array  = [[NSBundle mainBundle] loadNibNamed:@"TestTableViewCell" owner:self options:nil];
+        
+        cell = (TestTableViewCell *)[array lastObject];
+    }
+    
+    NSDictionary *dic =  [self.items objectAtIndex:indexPath.row];
+    
+    cell.cellLable.text = [dic objectForKey:@"title"];
+    return cell;
+}
+
+
+
+#pragma mark === Delegate
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UILabel *lable = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
+    lable.text = @" section text ";
+    
+    return lable;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Table Index path row : %ld" , indexPath.row);
+}
+
+
+
 
 @end

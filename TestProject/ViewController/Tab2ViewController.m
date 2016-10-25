@@ -112,14 +112,13 @@
     
 }
 
-
 #pragma mark ===== Test Delegate 
 
 -(void) testPush:(NSString *)value{
-    NSLog(@"test push %@" ,  value);
+    NSLog(@"test push  >>> %@" ,  value);
 }
 -(void) testModal:(NSInteger)value{
-    NSLog(@"test modal %ld" ,  (long)value);
+    NSLog(@"test modal >>> %ld" ,  (long)value);
 }
 
 @end
