@@ -54,12 +54,9 @@
     }
     
     [self stringTest];
-<<<<<<< HEAD
     [self arrayTest];
     [self dictionaryTest];
-=======
->>>>>>> 288bddd36afa2fba2531b1ded007f4da82c65af4
-    
+  
     
     NSLog(@"viewWillAppear:  >>> 뷰가 나타나기 바로 직전 ");
 }
@@ -146,8 +143,6 @@
     }
     NSLog(@"array test :  %d" , sum);
     
-<<<<<<< HEAD
-    
     // MutableString
     
     NSMutableString *mutableString = [NSMutableString string];
@@ -195,22 +190,17 @@
     [mutableArray removeObjectAtIndex:3];
     [mutableArray insertObject:@"new >>> 3" atIndex:3];
     NSLog(@"Check Mutable Array >>>  %@ " , [mutableArray objectAtIndex:3]);
-=======
-}
 
-- (void) arrayTest{
->>>>>>> 288bddd36afa2fba2531b1ded007f4da82c65af4
-    
-}
 
+}
 - (void) dictionaryTest{
-<<<<<<< HEAD
-//    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                                @"test1",@"key1"
-//                                @"test2",@"key2"
-//                                @"test3",@"key3"
-//                                @"test4",@"key4"
-//                                @"test5",@"key5", nil];
+    
+    //    NSDictionary *dictionary = [[NSDictionary alloc] initWithObjectsAndKeys:
+    //                                @"test1",@"key1"
+    //                                @"test2",@"key2"
+    //                                @"test3",@"key3"
+    //                                @"test4",@"key4"
+    //                                @"test5",@"key5", nil];
     NSDictionary *dictionary = [[NSDictionary alloc] initWithObjects:@[@"test1",@"test2",@"test3"] forKeys:@[@"key1",@"key2",@"key3"]];
     NSLog(@"Dictionary Test : %@ " , [dictionary objectForKey:@"key2"]);
     
@@ -218,7 +208,7 @@
         NSLog(@"Dictionary Key3값이 있음  >> : %@" ,[dictionary objectForKey:@"key3"]);
     }
     
-    
+
     // Mutable Dictionary
     
     NSMutableDictionary *mutableDictionary = [[NSMutableDictionary alloc] init];
@@ -227,10 +217,8 @@
         [mutableDictionary setObject:[NSString stringWithFormat:@"내용 %ld",(long)j] forKey:[NSString stringWithFormat:@"k%ld",(long)j]];
         NSLog(@"Check Mutable Dictionary >>>> :  %@ ", [mutableDictionary objectForKey:[NSString stringWithFormat:@"k%ld",(long)j]]);
     }
-    
-=======
->>>>>>> 288bddd36afa2fba2531b1ded007f4da82c65af4
-    
+
 }
+
 
 @end

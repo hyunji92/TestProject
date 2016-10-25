@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26576F131DBEED46003C31CD /* Tab2_1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26576F111DBEED46003C31CD /* Tab2_1ViewController.m */; };
+		26576F141DBEED46003C31CD /* Tab2_1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26576F121DBEED46003C31CD /* Tab2_1ViewController.xib */; };
 		26C976E11DB87F2B006CCD66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C976E01DB87F2B006CCD66 /* main.m */; };
 		26C976E41DB87F2B006CCD66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C976E31DB87F2B006CCD66 /* AppDelegate.m */; };
 		26C976EC1DB87F2B006CCD66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C976EB1DB87F2B006CCD66 /* Assets.xcassets */; };
@@ -41,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26576F101DBEED46003C31CD /* Tab2_1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tab2_1ViewController.h; sourceTree = "<group>"; };
+		26576F111DBEED46003C31CD /* Tab2_1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tab2_1ViewController.m; sourceTree = "<group>"; };
+		26576F121DBEED46003C31CD /* Tab2_1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Tab2_1ViewController.xib; sourceTree = "<group>"; };
 		26C976DC1DB87F2B006CCD66 /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C976E01DB87F2B006CCD66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26C976E21DB87F2B006CCD66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -164,6 +169,9 @@
 				26C9771A1DB8B610006CCD66 /* Tab2ViewController.h */,
 				26C9771B1DB8B610006CCD66 /* Tab2ViewController.m */,
 				26C9771C1DB8B610006CCD66 /* Tab2ViewController.xib */,
+				26576F101DBEED46003C31CD /* Tab2_1ViewController.h */,
+				26576F111DBEED46003C31CD /* Tab2_1ViewController.m */,
+				26576F121DBEED46003C31CD /* Tab2_1ViewController.xib */,
 				26C9771F1DB8B622006CCD66 /* Tab3ViewController.h */,
 				26C977201DB8B622006CCD66 /* Tab3ViewController.m */,
 				26C977211DB8B622006CCD66 /* Tab3ViewController.xib */,
@@ -284,6 +292,7 @@
 				26C976EC1DB87F2B006CCD66 /* Assets.xcassets in Resources */,
 				26C977231DB8B622006CCD66 /* Tab3ViewController.xib in Resources */,
 				26C9772B1DB8B694006CCD66 /* Tab4ViewController.xib in Resources */,
+				26576F141DBEED46003C31CD /* Tab2_1ViewController.xib in Resources */,
 				26C977161DB88342006CCD66 /* Tab1ViewController.xib in Resources */,
 				26C9771E1DB8B610006CCD66 /* Tab2ViewController.xib in Resources */,
 			);
@@ -316,6 +325,7 @@
 				26C9772A1DB8B694006CCD66 /* Tab4ViewController.m in Sources */,
 				26C976E11DB87F2B006CCD66 /* main.m in Sources */,
 				26C9771D1DB8B610006CCD66 /* Tab2ViewController.m in Sources */,
+				26576F131DBEED46003C31CD /* Tab2_1ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
