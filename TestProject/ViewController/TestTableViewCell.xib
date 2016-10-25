@@ -17,7 +17,7 @@
                 <frame key="frameInset" width="380" height="69"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z1z-8R-X2D">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_launcher_4" translatesAutoresizingMaskIntoConstraints="NO" id="z1z-8R-X2D">
                         <constraints>
                             <constraint firstAttribute="width" secondItem="z1z-8R-X2D" secondAttribute="height" multiplier="1:1" id="qnf-wh-qdZ"/>
                         </constraints>
@@ -67,4 +67,7 @@
             <point key="canvasLocation" x="64" y="79"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ico_launcher_4" width="52" height="52"/>
+    </resources>
 </document>

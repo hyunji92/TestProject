@@ -38,7 +38,11 @@
     
     mainTableView.delegate = self;
     mainTableView.dataSource = self;
+    
     [self makeDummyData];
+    [self makeNavigationButton];
+    
+    
 
 }
 
@@ -57,6 +61,18 @@
     }
     
     [mainTableView reloadData];
+}
+
+- (void) makeNavigationButton{
+    UIButton *rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
+    [rightButton setTitle:@" + " forState:UIControlStateNormal];
+    [rightButton addTarget:self action:@selector(clickAddButton:) forControlEvents:UIControlEventTouchUpInside ];
+    [rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal ];
+    
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:rightButton]];
+}
+- (void) clickAddButton:(UIButton *)sender{
+    NSLog(@"click Add Button !!! ");
 }
 
 #pragma mark === Datasource
@@ -87,6 +103,11 @@
         NSArray *array  = [[NSBundle mainBundle] loadNibNamed:@"TestTableViewCell" owner:self options:nil];
         cell = (TestTableViewCell *)[array lastObject];
     }
+    cell.imgView.clipsToBounds = YES; // imageview 특정 속성
+    cell.imgView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    cell.imgView.layer.borderWidth = 2;
+    cell.imgView.layer.cornerRadius = 25; // 모든 view를 깎을 수 있음. (view 안에 layer속성이 있고 그 layer를 깎는것! )
+    
     
     NSDictionary *dic =  [self.items objectAtIndex:indexPath.row];
     
