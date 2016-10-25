@@ -48,9 +48,9 @@
 		26576F101DBEED46003C31CD /* Tab2_1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab2_1ViewController.h; path = TestProject/ViewController/Tab2_1ViewController.h; sourceTree = SOURCE_ROOT; };
 		26576F111DBEED46003C31CD /* Tab2_1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab2_1ViewController.m; path = TestProject/ViewController/Tab2_1ViewController.m; sourceTree = SOURCE_ROOT; };
 		26576F121DBEED46003C31CD /* Tab2_1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab2_1ViewController.xib; path = TestProject/ViewController/Tab2_1ViewController.xib; sourceTree = SOURCE_ROOT; };
-		26576F151DBF1BCF003C31CD /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTableViewCell.h; sourceTree = "<group>"; };
-		26576F161DBF1BCF003C31CD /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTableViewCell.m; sourceTree = "<group>"; };
-		26576F171DBF1BCF003C31CD /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
+		26576F151DBF1BCF003C31CD /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTableViewCell.h; path = ../TestTableViewCell.h; sourceTree = "<group>"; };
+		26576F161DBF1BCF003C31CD /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTableViewCell.m; path = ../TestTableViewCell.m; sourceTree = "<group>"; };
+		26576F171DBF1BCF003C31CD /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestTableViewCell.xib; path = ../TestTableViewCell.xib; sourceTree = "<group>"; };
 		26C976DC1DB87F2B006CCD66 /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C976E01DB87F2B006CCD66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26C976E21DB87F2B006CCD66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +130,9 @@
 		26576F1C1DBF3E4D003C31CD /* Tab3 */ = {
 			isa = PBXGroup;
 			children = (
+				26576F151DBF1BCF003C31CD /* TestTableViewCell.h */,
+				26576F161DBF1BCF003C31CD /* TestTableViewCell.m */,
+				26576F171DBF1BCF003C31CD /* TestTableViewCell.xib */,
 				26C9771F1DB8B622006CCD66 /* Tab3ViewController.h */,
 				26C977201DB8B622006CCD66 /* Tab3ViewController.m */,
 				26C977211DB8B622006CCD66 /* Tab3ViewController.xib */,
@@ -215,9 +218,6 @@
 				26576F1B1DBF3E3D003C31CD /* Tab2 */,
 				26576F1C1DBF3E4D003C31CD /* Tab3 */,
 				26576F1D1DBF3E76003C31CD /* Tab4 */,
-				26576F151DBF1BCF003C31CD /* TestTableViewCell.h */,
-				26576F161DBF1BCF003C31CD /* TestTableViewCell.m */,
-				26576F171DBF1BCF003C31CD /* TestTableViewCell.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";

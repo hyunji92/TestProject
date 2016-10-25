@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgView;
 @property (strong, nonatomic) IBOutlet UILabel *cellLable;
-@property (strong, nonatomic) IBOutlet UIButton *button1;
-@property (strong, nonatomic) IBOutlet UIButton *button2;
+@property (strong, nonatomic) IBOutlet UILabel *cellLable2;
 
 @end

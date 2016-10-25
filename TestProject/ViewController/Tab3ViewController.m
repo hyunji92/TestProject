@@ -38,6 +38,7 @@
     
     mainTableView.delegate = self;
     mainTableView.dataSource = self;
+    [self makeDummyData];
 
 }
 
@@ -54,6 +55,8 @@
         [dic setObject:title forKey:@"title"];
         [self.items addObject:dic];
     }
+    
+    [mainTableView reloadData];
 }
 
 #pragma mark === Datasource
@@ -82,7 +85,6 @@
     TestTableViewCell *cell = (TestTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TestTableViewCell"];
     if(cell == nil){
         NSArray *array  = [[NSBundle mainBundle] loadNibNamed:@"TestTableViewCell" owner:self options:nil];
-        
         cell = (TestTableViewCell *)[array lastObject];
     }
     
