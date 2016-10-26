@@ -9,22 +9,24 @@
 /* Begin PBXBuildFile section */
 		26576F131DBEED46003C31CD /* Tab2_1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26576F111DBEED46003C31CD /* Tab2_1ViewController.m */; };
 		26576F141DBEED46003C31CD /* Tab2_1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26576F121DBEED46003C31CD /* Tab2_1ViewController.xib */; };
-		26576F181DBF1BCF003C31CD /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26576F161DBF1BCF003C31CD /* TestTableViewCell.m */; };
-		26576F191DBF1BCF003C31CD /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26576F171DBF1BCF003C31CD /* TestTableViewCell.xib */; };
 		26C976E11DB87F2B006CCD66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C976E01DB87F2B006CCD66 /* main.m */; };
 		26C976E41DB87F2B006CCD66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C976E31DB87F2B006CCD66 /* AppDelegate.m */; };
 		26C976EC1DB87F2B006CCD66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26C976EB1DB87F2B006CCD66 /* Assets.xcassets */; };
 		26C976EF1DB87F2B006CCD66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26C976ED1DB87F2B006CCD66 /* LaunchScreen.storyboard */; };
 		26C976FA1DB87F2B006CCD66 /* TestProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C976F91DB87F2B006CCD66 /* TestProjectTests.m */; };
 		26C977051DB87F2B006CCD66 /* TestProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C977041DB87F2B006CCD66 /* TestProjectUITests.m */; };
-		26C977151DB88342006CCD66 /* Tab1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C977131DB88342006CCD66 /* Tab1ViewController.m */; };
-		26C977161DB88342006CCD66 /* Tab1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C977141DB88342006CCD66 /* Tab1ViewController.xib */; };
 		26C9771D1DB8B610006CCD66 /* Tab2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C9771B1DB8B610006CCD66 /* Tab2ViewController.m */; };
 		26C9771E1DB8B610006CCD66 /* Tab2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C9771C1DB8B610006CCD66 /* Tab2ViewController.xib */; };
 		26C977221DB8B622006CCD66 /* Tab3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C977201DB8B622006CCD66 /* Tab3ViewController.m */; };
 		26C977231DB8B622006CCD66 /* Tab3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C977211DB8B622006CCD66 /* Tab3ViewController.xib */; };
 		26C9772A1DB8B694006CCD66 /* Tab4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C977281DB8B694006CCD66 /* Tab4ViewController.m */; };
 		26C9772B1DB8B694006CCD66 /* Tab4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C977291DB8B694006CCD66 /* Tab4ViewController.xib */; };
+		26E117521DC0352D004F3565 /* Tab1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117501DC0352D004F3565 /* Tab1ViewController.m */; };
+		26E117531DC0352D004F3565 /* Tab1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E117511DC0352D004F3565 /* Tab1ViewController.xib */; };
+		26E117571DC0353F004F3565 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117551DC0353F004F3565 /* TestTableViewCell.m */; };
+		26E117581DC0353F004F3565 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E117561DC0353F004F3565 /* TestTableViewCell.xib */; };
+		26E1175C1DC035EE004F3565 /* Tab3_1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E1175A1DC035EE004F3565 /* Tab3_1ViewController.m */; };
+		26E1175D1DC035EE004F3565 /* Tab3_1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E1175B1DC035EE004F3565 /* Tab3_1ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +50,6 @@
 		26576F101DBEED46003C31CD /* Tab2_1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab2_1ViewController.h; path = TestProject/ViewController/Tab2_1ViewController.h; sourceTree = SOURCE_ROOT; };
 		26576F111DBEED46003C31CD /* Tab2_1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab2_1ViewController.m; path = TestProject/ViewController/Tab2_1ViewController.m; sourceTree = SOURCE_ROOT; };
 		26576F121DBEED46003C31CD /* Tab2_1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab2_1ViewController.xib; path = TestProject/ViewController/Tab2_1ViewController.xib; sourceTree = SOURCE_ROOT; };
-		26576F151DBF1BCF003C31CD /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTableViewCell.h; path = ../TestTableViewCell.h; sourceTree = "<group>"; };
-		26576F161DBF1BCF003C31CD /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTableViewCell.m; path = ../TestTableViewCell.m; sourceTree = "<group>"; };
-		26576F171DBF1BCF003C31CD /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestTableViewCell.xib; path = ../TestTableViewCell.xib; sourceTree = "<group>"; };
 		26C976DC1DB87F2B006CCD66 /* TestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C976E01DB87F2B006CCD66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26C976E21DB87F2B006CCD66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,9 +63,6 @@
 		26C977001DB87F2B006CCD66 /* TestProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26C977041DB87F2B006CCD66 /* TestProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestProjectUITests.m; sourceTree = "<group>"; };
 		26C977061DB87F2B006CCD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		26C977121DB88342006CCD66 /* Tab1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab1ViewController.h; path = ../../Tab1ViewController.h; sourceTree = "<group>"; };
-		26C977131DB88342006CCD66 /* Tab1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab1ViewController.m; path = ../../Tab1ViewController.m; sourceTree = "<group>"; };
-		26C977141DB88342006CCD66 /* Tab1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab1ViewController.xib; path = ../../Tab1ViewController.xib; sourceTree = "<group>"; };
 		26C977171DB8838D006CCD66 /* testProject.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testProject.pch; sourceTree = "<group>"; };
 		26C9771A1DB8B610006CCD66 /* Tab2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab2ViewController.h; path = TestProject/ViewController/Tab2ViewController.h; sourceTree = SOURCE_ROOT; };
 		26C9771B1DB8B610006CCD66 /* Tab2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab2ViewController.m; path = TestProject/ViewController/Tab2ViewController.m; sourceTree = SOURCE_ROOT; };
@@ -77,6 +73,15 @@
 		26C977271DB8B694006CCD66 /* Tab4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab4ViewController.h; path = TestProject/ViewController/Tab4ViewController.h; sourceTree = SOURCE_ROOT; };
 		26C977281DB8B694006CCD66 /* Tab4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab4ViewController.m; path = TestProject/ViewController/Tab4ViewController.m; sourceTree = SOURCE_ROOT; };
 		26C977291DB8B694006CCD66 /* Tab4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab4ViewController.xib; path = TestProject/ViewController/Tab4ViewController.xib; sourceTree = SOURCE_ROOT; };
+		26E1174F1DC0352D004F3565 /* Tab1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab1ViewController.h; path = TestProject/Tab1ViewController.h; sourceTree = SOURCE_ROOT; };
+		26E117501DC0352D004F3565 /* Tab1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab1ViewController.m; path = TestProject/Tab1ViewController.m; sourceTree = SOURCE_ROOT; };
+		26E117511DC0352D004F3565 /* Tab1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab1ViewController.xib; path = TestProject/Tab1ViewController.xib; sourceTree = SOURCE_ROOT; };
+		26E117541DC0353F004F3565 /* TestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestTableViewCell.h; path = TestProject/ViewController/TestTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		26E117551DC0353F004F3565 /* TestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestTableViewCell.m; path = TestProject/ViewController/TestTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		26E117561DC0353F004F3565 /* TestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TestTableViewCell.xib; path = TestProject/ViewController/TestTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		26E117591DC035EE004F3565 /* Tab3_1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab3_1ViewController.h; path = TestProject/ViewController/Tab3_1ViewController.h; sourceTree = SOURCE_ROOT; };
+		26E1175A1DC035EE004F3565 /* Tab3_1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab3_1ViewController.m; path = TestProject/ViewController/Tab3_1ViewController.m; sourceTree = SOURCE_ROOT; };
+		26E1175B1DC035EE004F3565 /* Tab3_1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab3_1ViewController.xib; path = TestProject/ViewController/Tab3_1ViewController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +112,9 @@
 		26576F1A1DBF3E3D003C31CD /* Tab1 */ = {
 			isa = PBXGroup;
 			children = (
-				26C977121DB88342006CCD66 /* Tab1ViewController.h */,
-				26C977131DB88342006CCD66 /* Tab1ViewController.m */,
-				26C977141DB88342006CCD66 /* Tab1ViewController.xib */,
+				26E1174F1DC0352D004F3565 /* Tab1ViewController.h */,
+				26E117501DC0352D004F3565 /* Tab1ViewController.m */,
+				26E117511DC0352D004F3565 /* Tab1ViewController.xib */,
 			);
 			path = Tab1;
 			sourceTree = "<group>";
@@ -130,12 +135,15 @@
 		26576F1C1DBF3E4D003C31CD /* Tab3 */ = {
 			isa = PBXGroup;
 			children = (
-				26576F151DBF1BCF003C31CD /* TestTableViewCell.h */,
-				26576F161DBF1BCF003C31CD /* TestTableViewCell.m */,
-				26576F171DBF1BCF003C31CD /* TestTableViewCell.xib */,
+				26E117541DC0353F004F3565 /* TestTableViewCell.h */,
+				26E117551DC0353F004F3565 /* TestTableViewCell.m */,
+				26E117561DC0353F004F3565 /* TestTableViewCell.xib */,
 				26C9771F1DB8B622006CCD66 /* Tab3ViewController.h */,
 				26C977201DB8B622006CCD66 /* Tab3ViewController.m */,
 				26C977211DB8B622006CCD66 /* Tab3ViewController.xib */,
+				26E117591DC035EE004F3565 /* Tab3_1ViewController.h */,
+				26E1175A1DC035EE004F3565 /* Tab3_1ViewController.m */,
+				26E1175B1DC035EE004F3565 /* Tab3_1ViewController.xib */,
 			);
 			path = Tab3;
 			sourceTree = "<group>";
@@ -329,13 +337,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C976EF1DB87F2B006CCD66 /* LaunchScreen.storyboard in Resources */,
-				26576F191DBF1BCF003C31CD /* TestTableViewCell.xib in Resources */,
 				26C976EC1DB87F2B006CCD66 /* Assets.xcassets in Resources */,
+				26E1175D1DC035EE004F3565 /* Tab3_1ViewController.xib in Resources */,
+				26E117581DC0353F004F3565 /* TestTableViewCell.xib in Resources */,
 				26C977231DB8B622006CCD66 /* Tab3ViewController.xib in Resources */,
 				26C9772B1DB8B694006CCD66 /* Tab4ViewController.xib in Resources */,
 				26576F141DBEED46003C31CD /* Tab2_1ViewController.xib in Resources */,
-				26C977161DB88342006CCD66 /* Tab1ViewController.xib in Resources */,
 				26C9771E1DB8B610006CCD66 /* Tab2ViewController.xib in Resources */,
+				26E117531DC0352D004F3565 /* Tab1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,13 +369,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26C977151DB88342006CCD66 /* Tab1ViewController.m in Sources */,
-				26576F181DBF1BCF003C31CD /* TestTableViewCell.m in Sources */,
 				26C977221DB8B622006CCD66 /* Tab3ViewController.m in Sources */,
 				26C976E41DB87F2B006CCD66 /* AppDelegate.m in Sources */,
 				26C9772A1DB8B694006CCD66 /* Tab4ViewController.m in Sources */,
 				26C976E11DB87F2B006CCD66 /* main.m in Sources */,
+				26E117521DC0352D004F3565 /* Tab1ViewController.m in Sources */,
+				26E1175C1DC035EE004F3565 /* Tab3_1ViewController.m in Sources */,
 				26C9771D1DB8B610006CCD66 /* Tab2ViewController.m in Sources */,
+				26E117571DC0353F004F3565 /* TestTableViewCell.m in Sources */,
 				26576F131DBEED46003C31CD /* Tab2_1ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

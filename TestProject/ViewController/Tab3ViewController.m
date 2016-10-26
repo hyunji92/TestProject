@@ -8,11 +8,14 @@
 
 #import "Tab3ViewController.h"
 #import "TestTableViewCell.h"
+#import "Tab3_1ViewController.h"
 
-@interface Tab3ViewController ()<UITableViewDelegate, UITableViewDataSource>{
+@interface Tab3ViewController ()< testDelegate2,UITableViewDelegate, UITableViewDataSource>{
     NSInteger currentTag;
     
     IBOutlet UITableView *mainTableView;
+    
+    UIButton *button;
     
 }
 
@@ -67,12 +70,16 @@
     UIButton *rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
     [rightButton setTitle:@" + " forState:UIControlStateNormal];
     [rightButton addTarget:self action:@selector(clickAddButton:) forControlEvents:UIControlEventTouchUpInside ];
-    [rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal ];
-    
+    [rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:rightButton]];
 }
 - (void) clickAddButton:(UIButton *)sender{
     NSLog(@"click Add Button !!! ");
+    Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] init];
+    tab3_1ViewController.delegate = self;
+    
+    [self.navigationController pushViewController:tab3_1ViewController animated:YES];
+    
 }
 
 #pragma mark === Datasource
@@ -129,7 +136,12 @@
     NSLog(@"Table Index path row : %ld" , indexPath.row);
 }
 
+#pragma mark ===== Test Delegate 2
 
+-(void) testTextFiled:(NSString *)value{
+    
+    
+}
 
 
 @end
