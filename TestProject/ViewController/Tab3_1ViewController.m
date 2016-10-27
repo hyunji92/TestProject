@@ -37,6 +37,9 @@
     [super viewDidLoad];
     
     [self makeNavigationButton];
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.toolbar.translucent = NO;
+    self.tabBarController.tabBar.translucent = NO;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboard:) name:UIKeyboardDidHideNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboard:) name:UIKeyboardWillHideNotification object:nil];
@@ -128,7 +131,7 @@
             
         }else if ([notification.name isEqualToString:UIKeyboardWillShowNotification]){
             
-            _bottomConst.constant = keyBoardRect.size.height;
+            _bottomConst.constant = keyBoardRect.size.height - self.tabBarController.tabBar.frame.size.height;
             NSLog(@"UIKeyboardWillShowNotification ! ");
             
         }

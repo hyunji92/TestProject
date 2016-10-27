@@ -27,6 +27,13 @@
 		26E117581DC0353F004F3565 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E117561DC0353F004F3565 /* TestTableViewCell.xib */; };
 		26E1175C1DC035EE004F3565 /* Tab3_1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E1175A1DC035EE004F3565 /* Tab3_1ViewController.m */; };
 		26E1175D1DC035EE004F3565 /* Tab3_1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E1175B1DC035EE004F3565 /* Tab3_1ViewController.xib */; };
+		26E117641DC1CA4A004F3565 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 26E117631DC1CA4A004F3565 /* libsqlite3.0.tbd */; };
+		26E1176B1DC1CAB5004F3565 /* TestDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117691DC1CAB5004F3565 /* TestDBManager.m */; };
+		26E117781DC1CAE0004F3565 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E1176E1DC1CAE0004F3565 /* FMDatabase.m */; };
+		26E117791DC1CAE0004F3565 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117701DC1CAE0004F3565 /* FMDatabaseAdditions.m */; };
+		26E1177A1DC1CAE0004F3565 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117721DC1CAE0004F3565 /* FMDatabasePool.m */; };
+		26E1177B1DC1CAE0004F3565 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117741DC1CAE0004F3565 /* FMDatabaseQueue.m */; };
+		26E1177C1DC1CAE0004F3565 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117771DC1CAE0004F3565 /* FMResultSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +89,21 @@
 		26E117591DC035EE004F3565 /* Tab3_1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab3_1ViewController.h; path = TestProject/ViewController/Tab3_1ViewController.h; sourceTree = SOURCE_ROOT; };
 		26E1175A1DC035EE004F3565 /* Tab3_1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab3_1ViewController.m; path = TestProject/ViewController/Tab3_1ViewController.m; sourceTree = SOURCE_ROOT; };
 		26E1175B1DC035EE004F3565 /* Tab3_1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab3_1ViewController.xib; path = TestProject/ViewController/Tab3_1ViewController.xib; sourceTree = SOURCE_ROOT; };
+		26E117631DC1CA4A004F3565 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		26E117681DC1CAB5004F3565 /* TestDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDBManager.h; sourceTree = "<group>"; };
+		26E117691DC1CAB5004F3565 /* TestDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDBManager.m; sourceTree = "<group>"; };
+		26E1176A1DC1CAB5004F3565 /* TestDBTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDBTag.h; sourceTree = "<group>"; };
+		26E1176D1DC1CAE0004F3565 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		26E1176E1DC1CAE0004F3565 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		26E1176F1DC1CAE0004F3565 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		26E117701DC1CAE0004F3565 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		26E117711DC1CAE0004F3565 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		26E117721DC1CAE0004F3565 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		26E117731DC1CAE0004F3565 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		26E117741DC1CAE0004F3565 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		26E117751DC1CAE0004F3565 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		26E117761DC1CAE0004F3565 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		26E117771DC1CAE0004F3565 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E117641DC1CA4A004F3565 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +188,7 @@
 				26C976F81DB87F2B006CCD66 /* TestProjectTests */,
 				26C977031DB87F2B006CCD66 /* TestProjectUITests */,
 				26C976DD1DB87F2B006CCD66 /* Products */,
+				26E117621DC1CA49004F3565 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +205,8 @@
 		26C976DE1DB87F2B006CCD66 /* TestProject */ = {
 			isa = PBXGroup;
 			children = (
+				26E1176C1DC1CAE0004F3565 /* fmdb */,
+				26E117671DC1CAB5004F3565 /* DB */,
 				26C977191DB89D6D006CCD66 /* ViewController */,
 				26C976E21DB87F2B006CCD66 /* AppDelegate.h */,
 				26C976E31DB87F2B006CCD66 /* AppDelegate.m */,
@@ -228,6 +254,42 @@
 				26576F1D1DBF3E76003C31CD /* Tab4 */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		26E117621DC1CA49004F3565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26E117631DC1CA4A004F3565 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26E117671DC1CAB5004F3565 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				26E117681DC1CAB5004F3565 /* TestDBManager.h */,
+				26E117691DC1CAB5004F3565 /* TestDBManager.m */,
+				26E1176A1DC1CAB5004F3565 /* TestDBTag.h */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		26E1176C1DC1CAE0004F3565 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				26E1176D1DC1CAE0004F3565 /* FMDatabase.h */,
+				26E1176E1DC1CAE0004F3565 /* FMDatabase.m */,
+				26E1176F1DC1CAE0004F3565 /* FMDatabaseAdditions.h */,
+				26E117701DC1CAE0004F3565 /* FMDatabaseAdditions.m */,
+				26E117711DC1CAE0004F3565 /* FMDatabasePool.h */,
+				26E117721DC1CAE0004F3565 /* FMDatabasePool.m */,
+				26E117731DC1CAE0004F3565 /* FMDatabaseQueue.h */,
+				26E117741DC1CAE0004F3565 /* FMDatabaseQueue.m */,
+				26E117751DC1CAE0004F3565 /* FMDB.h */,
+				26E117761DC1CAE0004F3565 /* FMResultSet.h */,
+				26E117771DC1CAE0004F3565 /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,13 +433,19 @@
 			files = (
 				26C977221DB8B622006CCD66 /* Tab3ViewController.m in Sources */,
 				26C976E41DB87F2B006CCD66 /* AppDelegate.m in Sources */,
+				26E1177A1DC1CAE0004F3565 /* FMDatabasePool.m in Sources */,
+				26E1177B1DC1CAE0004F3565 /* FMDatabaseQueue.m in Sources */,
 				26C9772A1DB8B694006CCD66 /* Tab4ViewController.m in Sources */,
 				26C976E11DB87F2B006CCD66 /* main.m in Sources */,
 				26E117521DC0352D004F3565 /* Tab1ViewController.m in Sources */,
 				26E1175C1DC035EE004F3565 /* Tab3_1ViewController.m in Sources */,
 				26C9771D1DB8B610006CCD66 /* Tab2ViewController.m in Sources */,
+				26E1177C1DC1CAE0004F3565 /* FMResultSet.m in Sources */,
 				26E117571DC0353F004F3565 /* TestTableViewCell.m in Sources */,
 				26576F131DBEED46003C31CD /* Tab2_1ViewController.m in Sources */,
+				26E117781DC1CAE0004F3565 /* FMDatabase.m in Sources */,
+				26E1176B1DC1CAB5004F3565 /* TestDBManager.m in Sources */,
+				26E117791DC1CAE0004F3565 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

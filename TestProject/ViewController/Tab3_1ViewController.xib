@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Tab3_1ViewController">
             <connections>
+                <outlet property="bottomConst" destination="NOl-pC-y4y" id="cBw-xQ-x5o"/>
                 <outlet property="imageButton" destination="abh-3S-EQH" id="NYM-V8-6fM"/>
                 <outlet property="textview" destination="H0D-no-FZa" id="y9x-rQ-RVU"/>
                 <outlet property="titleTextFiled" destination="sJJ-Ti-naS" id="8a9-rK-oZ9"/>
