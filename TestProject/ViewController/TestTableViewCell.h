@@ -8,10 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TestTableViewCellDelegate <NSObject>
+
+-(void) selectedIndexPath:(NSIndexPath *)path;
+
+@end
+
 @interface TestTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *imgView;
 @property (strong, nonatomic) IBOutlet UILabel *cellLable;
 @property (strong, nonatomic) IBOutlet UILabel *cellLable2;
+@property (strong, nonatomic) IBOutlet UIButton *editButton;
+
+@property (strong, nonatomic) NSIndexPath *path;
+
+@property (weak, nonatomic) id<TestTableViewCellDelegate> delegate;
 
 @end

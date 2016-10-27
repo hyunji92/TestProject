@@ -38,11 +38,21 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXl-yO-PlV">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="nCC-QB-yjS"/>
+                            <constraint firstAttribute="width" constant="70" id="uBz-Uh-cAK"/>
+                        </constraints>
+                        <connections>
+                            <action selector="clickEditButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="obb-Ur-fvO"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="oZj-ci-Njs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2AV-US-rKu"/>
                     <constraint firstItem="z1z-8R-X2D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="7UV-t5-aWs"/>
                     <constraint firstAttribute="trailing" secondItem="Y9h-hy-fQx" secondAttribute="trailing" id="9kq-zx-rbB"/>
+                    <constraint firstItem="aXl-yO-PlV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="BRy-SQ-mrQ"/>
                     <constraint firstItem="z1z-8R-X2D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="FFi-gz-kXd"/>
                     <constraint firstItem="Y9h-hy-fQx" firstAttribute="leading" secondItem="oZj-ci-Njs" secondAttribute="leading" id="FMl-jt-v7m"/>
                     <constraint firstAttribute="bottom" secondItem="Y9h-hy-fQx" secondAttribute="bottom" id="Li3-zv-RQQ"/>
@@ -52,6 +62,7 @@
                     <constraint firstItem="Y9h-hy-fQx" firstAttribute="top" secondItem="oZj-ci-Njs" secondAttribute="bottom" id="UQA-r0-p1O"/>
                     <constraint firstItem="oZj-ci-Njs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ddq-5W-ZSG"/>
                     <constraint firstItem="Y9h-hy-fQx" firstAttribute="trailing" secondItem="oZj-ci-Njs" secondAttribute="trailing" id="oPG-Xi-6oR"/>
+                    <constraint firstItem="aXl-yO-PlV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qsa-i2-okL"/>
                     <constraint firstAttribute="bottom" secondItem="z1z-8R-X2D" secondAttribute="bottom" constant="9" id="u9K-SN-eyO"/>
                     <constraint firstItem="Y9h-hy-fQx" firstAttribute="top" secondItem="oZj-ci-Njs" secondAttribute="bottom" id="wq6-uy-GhA"/>
                     <constraint firstItem="oZj-ci-Njs" firstAttribute="leading" secondItem="z1z-8R-X2D" secondAttribute="trailing" constant="40" id="zgp-9d-Xa0"/>
@@ -60,6 +71,7 @@
             <connections>
                 <outlet property="cellLable" destination="oZj-ci-Njs" id="TDw-Y9-SQJ"/>
                 <outlet property="cellLable2" destination="Y9h-hy-fQx" id="747-ee-3VV"/>
+                <outlet property="editButton" destination="aXl-yO-PlV" id="pDq-Lr-hyD"/>
                 <outlet property="imgView" destination="z1z-8R-X2D" id="Wbr-Ao-eVx"/>
             </connections>
             <point key="canvasLocation" x="64" y="79"/>

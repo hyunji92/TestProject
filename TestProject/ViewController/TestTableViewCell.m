@@ -21,4 +21,10 @@
     // Configure the view for the selected state
 }
 
+-(IBAction)clickEditButton :(id)sender{
+    if(_delegate){
+        [_delegate selectedIndexPath:_path];
+        
+    }
+}
 @end

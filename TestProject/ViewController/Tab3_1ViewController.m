@@ -8,14 +8,30 @@
 
 #import "Tab3_1ViewController.h"
 
-@interface Tab3_1ViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@interface Tab3_1ViewController () <UIImagePickerControllerDelegate,UINavigationControllerDelegate> {
+
+    TestType testtype;
+    NSDictionary *dic;
+    
+}
 @property (strong, nonatomic) IBOutlet UIButton *imageButton;
 @property (strong, nonatomic) IBOutlet UITextView *textview;
 @property (strong, nonatomic) IBOutlet UITextField *titleTextFiled;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *bottomConst;
 
 @end
 
+
 @implementation Tab3_1ViewController
+
+- (id)initWithTestType:(TestType)TestType item:(NSDictionary *)item{
+    self = [super init]; //넘어 온것 세팅
+    if(self){
+        testtype = TestType;
+        dic = item;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +43,25 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboard:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboard:) name:UIKeyboardWillShowNotification object:nil];
     
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    switch (testtype) {
+        case TestType_New:
+            self.title = @"일기작성";
+            break;
+        case TestType_Detail:
+            self.title = @"상세보기";
+            break;
+        case TestType_Update:
+            self.title = @"편집하기";
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,20 +107,36 @@
 }
 
 -(void) keyboard:(NSNotification *)notification{
-    if([notification.name isEqualToString:UIKeyboardDidHideNotification]){
-        NSLog(@"UIKeyboardDidHideNotification ! ");
+    
+    CGRect keyBoardRect;
+    [[notification.userInfo valueForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyBoardRect];
+    
+    
+    [UIView animateWithDuration:0.4f animations:^{
         
-    }else if ([notification.name isEqualToString:UIKeyboardDidShowNotification]){
-        NSLog(@"UIKeyboardDidShowNotification ! ");
-        
-    }else if ([notification.name isEqualToString:UIKeyboardWillHideNotification]){
-        NSLog(@"UIKeyboardWillHideNotification ! ");
-        
-    }else if ([notification.name isEqualToString:UIKeyboardWillShowNotification]){
-        NSLog(@"UIKeyboardWillShowNotification ! ");
-        
-    }
-   
+        if([notification.name isEqualToString:UIKeyboardDidHideNotification]){
+            
+            NSLog(@"UIKeyboardDidHideNotification ! ");
+            
+        }else if ([notification.name isEqualToString:UIKeyboardDidShowNotification]){
+            NSLog(@"UIKeyboardDidShowNotification ! ");
+            
+        }else if ([notification.name isEqualToString:UIKeyboardWillHideNotification]){
+            
+            _bottomConst.constant = 0;
+            NSLog(@"UIKeyboardWillHideNotification ! ");
+            
+        }else if ([notification.name isEqualToString:UIKeyboardWillShowNotification]){
+            
+            _bottomConst.constant = keyBoardRect.size.height;
+            NSLog(@"UIKeyboardWillShowNotification ! ");
+            
+        }
+
+    }];
+    
+    
+    
 }
 -(IBAction)dismissKeyboard:(id)sender{
     [_titleTextFiled resignFirstResponder];

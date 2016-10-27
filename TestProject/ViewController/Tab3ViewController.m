@@ -10,7 +10,7 @@
 #import "TestTableViewCell.h"
 #import "Tab3_1ViewController.h"
 
-@interface Tab3ViewController ()< testDelegate2,UITableViewDelegate, UITableViewDataSource>{
+@interface Tab3ViewController ()< testDelegate2,UITableViewDelegate, UITableViewDataSource ,TestTableViewCellDelegate>{
     NSInteger currentTag;
     
     IBOutlet UITableView *mainTableView;
@@ -75,7 +75,7 @@
 }
 - (void) clickAddButton:(UIButton *)sender{
     NSLog(@"click Add Button !!! ");
-    Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] init];
+    Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] initWithTestType:TestType_New item:nil];
     tab3_1ViewController.delegate = self;
     
     [self.navigationController pushViewController:tab3_1ViewController animated:YES];
@@ -110,6 +110,8 @@
         NSArray *array  = [[NSBundle mainBundle] loadNibNamed:@"TestTableViewCell" owner:self options:nil];
         cell = (TestTableViewCell *)[array lastObject];
     }
+    cell.delegate = self;
+    cell.path = indexPath;
     cell.imgView.clipsToBounds = YES; // imageview 특정 속성
     cell.imgView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     cell.imgView.layer.borderWidth = 2;
@@ -134,6 +136,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Table Index path row : %ld" , indexPath.row);
+    
+    Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] initWithTestType:TestType_Detail item:nil];
+    tab3_1ViewController.delegate = self;
+    
+    [self.navigationController pushViewController:tab3_1ViewController animated:YES];
 }
 
 #pragma mark ===== Test Delegate 2
@@ -141,6 +148,16 @@
 -(void) testTextFiled:(NSString *)value{
     
     
+}
+
+-(void) selectedIndexPath:(NSIndexPath *)path{
+    
+    Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] initWithTestType:TestType_Update item:nil];
+    tab3_1ViewController.delegate = self;
+    
+    [self.navigationController pushViewController:tab3_1ViewController animated:YES];
+    
+    NSLog(@"편집 row %ld" , path.row);
 }
 
 

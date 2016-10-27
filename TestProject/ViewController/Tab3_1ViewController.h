@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    TestType_New,
+    TestType_Update,
+    TestType_Detail
+}TestType;
+
 @protocol testDelegate2 <NSObject>
 
 -(void) testTextFiled:(NSString *)value;
@@ -17,5 +23,8 @@
 @interface Tab3_1ViewController : UIViewController
 
 @property (weak, nonatomic) id<testDelegate2> delegate;
+
+- (id)initWithTestType:(TestType)TestType item:(NSDictionary *)item;
+
 
 @end
