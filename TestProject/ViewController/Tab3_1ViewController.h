@@ -25,6 +25,7 @@ typedef enum {
 @property (weak, nonatomic) id<testDelegate2> delegate;
 
 - (id)initWithTestType:(TestType)TestType item:(NSDictionary *)item;
+- (id)initWithTestType:(TestType)TestType HjData:(HjData *)data;
 
 
 @end

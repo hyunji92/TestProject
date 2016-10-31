@@ -18,8 +18,6 @@
     
     TestDBManager *dbTestManager;
     
-    
-    
 }
 
 @property (strong, nonatomic) NSMutableArray *items;
@@ -55,10 +53,12 @@
 -(void) viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        self.items = [dbTestManager selectAllList];
-        dispatch_async(dispatch_get_main_queue(), ^{
+    // 여기서 로딩바를 돌리고
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{ // 데이타 처리할때 쓰는 쓰레드 백그라운드에서 도는 스레드
+        self.items = [dbTestManager selectAllListWithHjData];
+        dispatch_async(dispatch_get_main_queue(), ^{ // 위에 스레드 끝나면 UI갱신시 사용
             [mainTableView reloadData]; //db에있는 data한번 가져옴.
+            //이 안에서 로딩바를 끝내면 된다.
         });
     });
     
@@ -91,6 +91,7 @@
     [rightButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:rightButton]];
 }
+
 - (void) clickAddButton:(UIButton *)sender{
     NSLog(@"click Add Button !!! ");
     Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] initWithTestType:TestType_New item:nil];
@@ -120,8 +121,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UITableViewCell *cell =  [[UITableViewCell alloc]init];
-//    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
+    //    UITableViewCell *cell =  [[UITableViewCell alloc]init];
+    //    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
     
     TestTableViewCell *cell = (TestTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TestTableViewCell"];
     if(cell == nil){
@@ -136,13 +137,13 @@
     cell.imgView.layer.cornerRadius = 25; // 모든 view를 깎을 수 있음. (view 안에 layer속성이 있고 그 layer를 깎는것! )
     
     
-    NSDictionary *dic =  [self.items objectAtIndex:indexPath.row];
+    HjData *data =  [self.items objectAtIndex:indexPath.row];
     
-    cell.cellLable.text = [dic objectForKey:@"title"];
-    cell.cellLable2.text = [dic objectForKey:@"context"];
-    if ([dic objectForKey:@"img"] != nil) {
-        cell.imgView.image = [dic objectForKey:@"img"];
-    }
+    cell.cellLable.text = data.title;
+    cell.cellLable2.text = data.context;
+    UIImage *image = [UIImage imageWithData:data.img];
+    cell.imgView.image = image;
+
 
     return cell;
 }
@@ -150,12 +151,31 @@
 // 삭제에 필요한 함수들
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     //삭제버튼 누른 다음 , 여기서 삭제 처리
+    //[dbTestManager insertObject:currentData];
+    HjData *data = [self.items objectAtIndex:indexPath.row];
+
+    BOOL isSuccess = [dbTestManager deleteWithHjData:data];
+    if (!isSuccess) {
+        return;
+    }
+    [_items removeObjectAtIndex:indexPath.row];
+
+    [tableView beginUpdates];
+    [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    
+    [tableView endUpdates];
+    
+    //[_items addObject:data];
+    //[tableView beginUpdates];
+    //[tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:3 inSection:0]] withRowAnimation:UITableViewRowAnimationRight];
+    //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    //[tableView endUpdates];
     
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
     // 편집 가능 여부
-    if (indexPath.row == 0) {
+    if (indexPath.row < 0) {
         return NO;
     }
     return YES;
@@ -176,10 +196,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Table Index path row : %ld" , indexPath.row);
     
-    Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] initWithTestType:TestType_Detail item:nil];
+    HjData *data = [self.items objectAtIndex:indexPath.row];
+    
+    Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] initWithTestType:TestType_Detail HjData:data];
     tab3_1ViewController.delegate = self;
     
     [self.navigationController pushViewController:tab3_1ViewController animated:YES];
+    
+    
 }
 
 #pragma mark ===== Test Delegate 2
@@ -191,7 +215,8 @@
 
 -(void) selectedIndexPath:(NSIndexPath *)path{
     
-    Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] initWithTestType:TestType_Update item:nil];
+    HjData *data = [self.items objectAtIndex:path.row];
+    Tab3_1ViewController *tab3_1ViewController = [[Tab3_1ViewController alloc] initWithTestType:TestType_Update HjData:data];
     tab3_1ViewController.delegate = self;
     
     [self.navigationController pushViewController:tab3_1ViewController animated:YES];

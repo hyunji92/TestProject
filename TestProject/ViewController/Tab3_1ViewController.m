@@ -14,6 +14,7 @@
 
     TestType testtype;
     NSDictionary *dic;
+    HjData *currentData;
     
     TestDBManager *dbTestManager;
     UIImage *img;
@@ -29,6 +30,16 @@
 
 
 @implementation Tab3_1ViewController
+
+- (id)initWithTestType:(TestType)TestType HjData:(HjData *)data{
+    self = [super init]; //넘어 온것 세팅
+    if(self){
+        testtype = TestType;
+        currentData = data;
+    }
+    return self;
+
+}
 
 - (id)initWithTestType:(TestType)TestType item:(NSDictionary *)item{
     self = [super init]; //넘어 온것 세팅
@@ -54,29 +65,42 @@
     
     dbTestManager = [TestDBManager sharedDBManager];
     
-}
-
--(void) viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
     switch (testtype) {
         case TestType_New:
             self.title = @"일기작성";
             break;
         case TestType_Detail:
             self.title = @"상세보기";
+            _titleTextFiled.text = currentData.title;
+            _textview.text = currentData.context;
+            img = [UIImage imageWithData:currentData.img];
+            [_imageButton setBackgroundImage:img forState:UIControlStateNormal];
+            
             [_titleTextFiled setEnabled:NO];
             [_textview setEditable:NO];
             _buttonBGview.hidden = YES;
+            
             break;
         case TestType_Update:
             self.title = @"편집하기";
+            _titleTextFiled.text = currentData.title;
+            _textview.text = currentData.context;
+            img = [UIImage imageWithData:currentData.img];
+            [_imageButton setBackgroundImage:img forState:UIControlStateNormal];
+            
             break;
             
         default:
             break;
     }
+
+    
 }
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+   }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -99,13 +123,33 @@
         [alert2 show];
         return;
     }
-    if(testtype == TestType_New){
-        [dbTestManager insertTest:title context:text image:img date:[NSDate new]];
-    }else if(testtype == TestType_Update){
-        [dbTestManager updateWhtiIdx:[dic objectForKey:@"idx"] str:title context:text image:img date:[NSDate new]];
-    }
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        BOOL isSuccess = NO;
+        
+        if(testtype == TestType_New){
+            currentData = [HjData object];
+            currentData.title = title;
+            currentData.context = text;
+            currentData.img = UIImageJPEGRepresentation(img, 0);
+            currentData.date = [NSDate new];
+            isSuccess = [dbTestManager insertObject:currentData];
+            
+        }else if(testtype == TestType_Update){
+            
+            currentData.title = title;
+            currentData.context = text;
+            currentData.img = UIImageJPEGRepresentation(img, 0);
+            currentData.date = [NSDate new];
+
+            isSuccess = [dbTestManager updateObject:currentData];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.navigationController popViewControllerAnimated:YES];
+        });
+    });
+
+   
     
-    [self.navigationController popViewControllerAnimated:YES];
     
 }
 
@@ -134,11 +178,11 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
     NSLog(@" TEST ! IMAGE");
     UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-    UIImage *editingImage = [info objectForKey:UIImagePickerControllerEditedImage];
+    // UIImage *editingImage = [info objectForKey:UIImagePickerControllerEditedImage];
     
-    img = editingImage;
+    img = originalImage;
     
-    [_imageButton setBackgroundImage:editingImage forState:UIControlStateNormal];
+    [_imageButton setBackgroundImage:img forState:UIControlStateNormal];
     
 }
 

@@ -122,6 +122,22 @@ static TestDBManager *_sharedDBManager = nil;
     return array;
 }
 
+- (NSMutableArray*)getAllRowsFromHjObjectResultSet:(FMResultSet*)rs
+{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    while([rs next])
+    {
+        HjData *data = [HjData objectFromDictionary:[rs resultDictionary]];
+        //data.title = [[rs resultDictionary] objectForKey:@"title"];
+        //NSDictionary *di = [data dictionary]; dictionary 와 object 형식으 차이점.
+        
+        [array addObject:data];
+    }
+    return array;
+}
+
+
 // 저장 경로
 - (NSString *)getSavePath
 {
@@ -285,5 +301,93 @@ static TestDBManager *_sharedDBManager = nil;
     checkDBError(database);
     return isSuccess;
     
-} 
+}
+
+
+- (BOOL)insertObject:(HjData *)data{
+    BOOL isSuccess = NO;
+    
+    
+    //NSData   *imgBlobData = UIImageJPEGRepresentation(image, 1.0);
+    
+    isSuccess = [database executeUpdate:@"INSERT INTO "DB_TABLE " ("
+                 
+                 DB_COLUMN_TEST_TITLE ","
+                 DB_COLUMN_TEST_CONTEXT ","
+                 DB_COLUMN_TEST_IMAGE","
+                 DB_COLUMN_TEST_DATE
+                 ")  VALUES (?,?,?,?)",
+                 data.title,
+                 data.context,
+                 data.img,
+                 data.date
+                 ];
+    
+    checkDBError(database);
+    
+    return isSuccess;
+}
+
+- (NSMutableArray*)selectAllListWithHjData{
+    NSMutableArray *array;
+    FMResultSet *rs = [database executeQuery:@"SELECT * from " DB_TABLE ];
+    
+    checkDBError(database);
+    
+    array = [self getAllRowsFromHjObjectResultSet:rs];
+    [rs close];
+    
+    return array;
+}
+
+- (NSMutableArray*)selectWithHjData:(HjData *)data{
+    NSMutableArray *array;
+    FMResultSet *rs = [database executeQuery:@"SELECT * from " DB_TABLE " WHERE "DB_COLUMN_IDX"=?",data.idx];
+    
+    checkDBError(database);
+    
+    array = [self getAllRowsFromHjObjectResultSet:rs];
+    [rs close];
+    
+    return array;
+}
+
+
+- (BOOL)updateObject:(HjData *)data{
+    
+    BOOL isSuccess;
+    
+    //NSData   *imgBlobData = UIImageJPEGRepresentation(image, 1.0);
+    
+    isSuccess = [database executeUpdate:@"UPDATE "DB_TABLE " SET "
+                 
+                 DB_COLUMN_TEST_TITLE "=?,"
+                 DB_COLUMN_TEST_CONTEXT"=?,"
+                 DB_COLUMN_TEST_IMAGE"=?,"
+                 DB_COLUMN_TEST_DATE"=? "
+                 " WHERE "
+                 DB_COLUMN_IDX"=?",
+                 data.title,
+                 data.context,
+                 data.img,
+                 data.date,
+                 data.idx
+                 
+                 ];
+    
+    checkDBError(database);
+    
+    return isSuccess;
+}
+
+- (BOOL)deleteWithHjData:(HjData *)data{
+    
+    BOOL isSuccess;
+    isSuccess = [database executeUpdate:@"DELETE FROM " DB_TABLE " WHERE "DB_COLUMN_IDX"=?",data.idx];
+    checkDBError(database);
+    return isSuccess;
+
+}
+
+
 @end

@@ -7,6 +7,7 @@
 #import "FMDatabase.h"
 #import "FMDatabaseAdditions.h"
 #import "TestDBTag.h"
+
 @interface TestDBManager : NSObject
 
 @property (nonatomic, retain) FMDatabase    *database;
@@ -43,4 +44,19 @@
 - (BOOL)deleteAllDatas;
 
 - (BOOL)deleteWithIdx:(NSNumber*)idx;
+
+
+
+
+- (BOOL)insertObject:(HjData *)data;
+
+- (NSMutableArray*)selectAllListWithHjData;
+
+- (NSMutableArray*)selectWithHjData:(HjData *)data;
+
+- (BOOL)updateObject:(HjData *)data;
+
+- (BOOL)deleteWithHjData:(HjData *)data;
+
+
 @end

@@ -23,6 +23,8 @@
 		26C977231DB8B622006CCD66 /* Tab3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C977211DB8B622006CCD66 /* Tab3ViewController.xib */; };
 		26C9772A1DB8B694006CCD66 /* Tab4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C977281DB8B694006CCD66 /* Tab4ViewController.m */; };
 		26C9772B1DB8B694006CCD66 /* Tab4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26C977291DB8B694006CCD66 /* Tab4ViewController.xib */; };
+		26DF2BE01DC6E643000D55A0 /* HjData.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DF2BDF1DC6E643000D55A0 /* HjData.m */; };
+		26DF2BE61DC70239000D55A0 /* DictionaryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DF2BE51DC70239000D55A0 /* DictionaryObject.m */; };
 		26E117521DC0352D004F3565 /* Tab1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117501DC0352D004F3565 /* Tab1ViewController.m */; };
 		26E117531DC0352D004F3565 /* Tab1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26E117511DC0352D004F3565 /* Tab1ViewController.xib */; };
 		26E117571DC0353F004F3565 /* TestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117551DC0353F004F3565 /* TestTableViewCell.m */; };
@@ -88,6 +90,10 @@
 		26C977271DB8B694006CCD66 /* Tab4ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab4ViewController.h; path = TestProject/ViewController/Tab4ViewController.h; sourceTree = SOURCE_ROOT; };
 		26C977281DB8B694006CCD66 /* Tab4ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab4ViewController.m; path = TestProject/ViewController/Tab4ViewController.m; sourceTree = SOURCE_ROOT; };
 		26C977291DB8B694006CCD66 /* Tab4ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab4ViewController.xib; path = TestProject/ViewController/Tab4ViewController.xib; sourceTree = SOURCE_ROOT; };
+		26DF2BDE1DC6E643000D55A0 /* HjData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HjData.h; path = TestProject/HjData.h; sourceTree = SOURCE_ROOT; };
+		26DF2BDF1DC6E643000D55A0 /* HjData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HjData.m; path = TestProject/HjData.m; sourceTree = SOURCE_ROOT; };
+		26DF2BE41DC70239000D55A0 /* DictionaryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DictionaryObject.h; sourceTree = "<group>"; };
+		26DF2BE51DC70239000D55A0 /* DictionaryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DictionaryObject.m; sourceTree = "<group>"; };
 		26E1174F1DC0352D004F3565 /* Tab1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab1ViewController.h; path = TestProject/Tab1ViewController.h; sourceTree = SOURCE_ROOT; };
 		26E117501DC0352D004F3565 /* Tab1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab1ViewController.m; path = TestProject/Tab1ViewController.m; sourceTree = SOURCE_ROOT; };
 		26E117511DC0352D004F3565 /* Tab1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab1ViewController.xib; path = TestProject/Tab1ViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -175,6 +181,8 @@
 				26E117591DC035EE004F3565 /* Tab3_1ViewController.h */,
 				26E1175A1DC035EE004F3565 /* Tab3_1ViewController.m */,
 				26E1175B1DC035EE004F3565 /* Tab3_1ViewController.xib */,
+				26DF2BDE1DC6E643000D55A0 /* HjData.h */,
+				26DF2BDF1DC6E643000D55A0 /* HjData.m */,
 			);
 			path = Tab3;
 			sourceTree = "<group>";
@@ -278,6 +286,8 @@
 		26E117671DC1CAB5004F3565 /* DB */ = {
 			isa = PBXGroup;
 			children = (
+				26DF2BE41DC70239000D55A0 /* DictionaryObject.h */,
+				26DF2BE51DC70239000D55A0 /* DictionaryObject.m */,
 				26E117681DC1CAB5004F3565 /* TestDBManager.h */,
 				26E117691DC1CAB5004F3565 /* TestDBManager.m */,
 				26E1176A1DC1CAB5004F3565 /* TestDBTag.h */,
@@ -447,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26C977221DB8B622006CCD66 /* Tab3ViewController.m in Sources */,
+				26DF2BE01DC6E643000D55A0 /* HjData.m in Sources */,
 				26C976E41DB87F2B006CCD66 /* AppDelegate.m in Sources */,
 				26E1177A1DC1CAE0004F3565 /* FMDatabasePool.m in Sources */,
 				26E1177B1DC1CAE0004F3565 /* FMDatabaseQueue.m in Sources */,
@@ -461,6 +472,7 @@
 				26E117781DC1CAE0004F3565 /* FMDatabase.m in Sources */,
 				2669CBC81DC2DB5200C9A0C1 /* NSString+addition.m in Sources */,
 				26E1176B1DC1CAB5004F3565 /* TestDBManager.m in Sources */,
+				26DF2BE61DC70239000D55A0 /* DictionaryObject.m in Sources */,
 				26E117791DC1CAE0004F3565 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
