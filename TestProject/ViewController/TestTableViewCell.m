@@ -7,6 +7,8 @@
 //
 
 #import "TestTableViewCell.h"
+#import "TestDBManager.h"
+
 
 @implementation TestTableViewCell
 
@@ -22,8 +24,8 @@
 }
 
 -(IBAction)clickEditButton :(id)sender{
-    if(_delegate){
-        [_delegate selectedIndexPath:_path];
+    if(_celldelegate){
+        [_celldelegate selectedIndexPath:_path];
         
     }
 }

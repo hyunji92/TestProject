@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Tab3_1ViewController">
             <connections>
                 <outlet property="bottomConst" destination="NOl-pC-y4y" id="cBw-xQ-x5o"/>
+                <outlet property="buttonBGview" destination="fgf-Sy-gUX" id="auf-RR-P0Y"/>
                 <outlet property="imageButton" destination="abh-3S-EQH" id="NYM-V8-6fM"/>
                 <outlet property="textview" destination="H0D-no-FZa" id="y9x-rQ-RVU"/>
                 <outlet property="titleTextFiled" destination="sJJ-Ti-naS" id="8a9-rK-oZ9"/>
@@ -56,6 +57,9 @@
                             <state key="normal" title="확 인">
                                 <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                             </state>
+                            <connections>
+                                <action selector="saveText:" destination="-1" eventType="touchUpInside" id="aMs-hM-Odv"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xw3-xF-tGO">
                             <color key="backgroundColor" red="0.79738730359999999" green="0.87843137250000003" blue="0.52449942319999998" alpha="1" colorSpace="calibratedRGB"/>

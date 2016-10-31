@@ -23,6 +23,6 @@
 
 @property (strong, nonatomic) NSIndexPath *path;
 
-@property (weak, nonatomic) id<TestTableViewCellDelegate> delegate;
+@property (weak, nonatomic) id<TestTableViewCellDelegate> celldelegate;
 
 @end

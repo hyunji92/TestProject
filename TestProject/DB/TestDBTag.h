@@ -5,8 +5,7 @@
 
 #define DB_COLUMN_IDX                   @"idx"
 
-#define DB_COLUMN_TEST_TITLE         @"string_type"
-#define DB_COLUMN_TEST_CONTEXT       @"string_type"
-#define DB_COLUMN_TEST_BOOL          @"bool_type"
-#define DB_COLUMN_TEST_IMAGE         @"image_type"
-#define DB_COLUMN_TEST_DATE          @"date_type"
+#define DB_COLUMN_TEST_TITLE         @"title"
+#define DB_COLUMN_TEST_CONTEXT       @"context"
+#define DB_COLUMN_TEST_IMAGE         @"img"
+#define DB_COLUMN_TEST_DATE          @"date"

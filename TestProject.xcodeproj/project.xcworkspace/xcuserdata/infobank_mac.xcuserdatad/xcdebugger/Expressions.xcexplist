@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[Tab3_1ViewController saveText:]:Tab3_1ViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "img">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Tab3ViewController viewDidAppear:]:Tab3ViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__36-[Tab3ViewController viewDidAppear:]_block_invoke_2:Tab3ViewController.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

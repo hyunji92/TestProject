@@ -9,13 +9,16 @@
 #import "Tab3ViewController.h"
 #import "TestTableViewCell.h"
 #import "Tab3_1ViewController.h"
+#import "TestDBManager.h"
 
 @interface Tab3ViewController ()< testDelegate2,UITableViewDelegate, UITableViewDataSource ,TestTableViewCellDelegate>{
-    NSInteger currentTag;
-    
     IBOutlet UITableView *mainTableView;
-    
+    NSInteger currentTag;
     UIButton *button;
+    
+    TestDBManager *dbTestManager;
+    
+    
     
 }
 
@@ -42,12 +45,27 @@
     mainTableView.delegate = self;
     mainTableView.dataSource = self;
     
-    [self makeDummyData];
+    // [self makeDummyData];
     [self makeNavigationButton];
     
+    dbTestManager = [TestDBManager sharedDBManager];
     
-
 }
+
+-(void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        self.items = [dbTestManager selectAllList];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [mainTableView reloadData]; //db에있는 data한번 가져옴.
+        });
+    });
+    
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -110,7 +128,7 @@
         NSArray *array  = [[NSBundle mainBundle] loadNibNamed:@"TestTableViewCell" owner:self options:nil];
         cell = (TestTableViewCell *)[array lastObject];
     }
-    cell.delegate = self;
+    cell.celldelegate = self;
     cell.path = indexPath;
     cell.imgView.clipsToBounds = YES; // imageview 특정 속성
     cell.imgView.layer.borderColor = [UIColor lightGrayColor].CGColor;
@@ -121,6 +139,11 @@
     NSDictionary *dic =  [self.items objectAtIndex:indexPath.row];
     
     cell.cellLable.text = [dic objectForKey:@"title"];
+    cell.cellLable2.text = [dic objectForKey:@"context"];
+    if ([dic objectForKey:@"img"] != nil) {
+        cell.imgView.image = [dic objectForKey:@"img"];
+    }
+
     return cell;
 }
 
