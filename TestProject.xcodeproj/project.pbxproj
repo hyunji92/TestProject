@@ -38,6 +38,8 @@
 		26E1177A1DC1CAE0004F3565 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117721DC1CAE0004F3565 /* FMDatabasePool.m */; };
 		26E1177B1DC1CAE0004F3565 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117741DC1CAE0004F3565 /* FMDatabaseQueue.m */; };
 		26E1177C1DC1CAE0004F3565 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E117771DC1CAE0004F3565 /* FMResultSet.m */; };
+		52BE8B911DCB5EDE00B96875 /* Tab4CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE8B8F1DCB5EDE00B96875 /* Tab4CollectionViewCell.m */; };
+		52BE8B921DCB5EDE00B96875 /* Tab4CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE8B901DCB5EDE00B96875 /* Tab4CollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,9 @@
 		26E117751DC1CAE0004F3565 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		26E117761DC1CAE0004F3565 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		26E117771DC1CAE0004F3565 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		52BE8B8E1DCB5EDE00B96875 /* Tab4CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tab4CollectionViewCell.h; path = TestProject/ViewController/Tab4CollectionViewCell.h; sourceTree = SOURCE_ROOT; };
+		52BE8B8F1DCB5EDE00B96875 /* Tab4CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tab4CollectionViewCell.m; path = TestProject/ViewController/Tab4CollectionViewCell.m; sourceTree = SOURCE_ROOT; };
+		52BE8B901DCB5EDE00B96875 /* Tab4CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Tab4CollectionViewCell.xib; path = TestProject/ViewController/Tab4CollectionViewCell.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +200,9 @@
 				26C977291DB8B694006CCD66 /* Tab4ViewController.xib */,
 				2669CBC61DC2DB5200C9A0C1 /* NSString+addition.h */,
 				2669CBC71DC2DB5200C9A0C1 /* NSString+addition.m */,
+				52BE8B8E1DCB5EDE00B96875 /* Tab4CollectionViewCell.h */,
+				52BE8B8F1DCB5EDE00B96875 /* Tab4CollectionViewCell.m */,
+				52BE8B901DCB5EDE00B96875 /* Tab4CollectionViewCell.xib */,
 			);
 			path = Tab4;
 			sourceTree = "<group>";
@@ -423,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2669CBCB1DC2E5E300C9A0C1 /* localizaion.strings in Resources */,
+				52BE8B921DCB5EDE00B96875 /* Tab4CollectionViewCell.xib in Resources */,
 				26C976EF1DB87F2B006CCD66 /* LaunchScreen.storyboard in Resources */,
 				26C976EC1DB87F2B006CCD66 /* Assets.xcassets in Resources */,
 				26E1175D1DC035EE004F3565 /* Tab3_1ViewController.xib in Resources */,
@@ -473,6 +482,7 @@
 				2669CBC81DC2DB5200C9A0C1 /* NSString+addition.m in Sources */,
 				26E1176B1DC1CAB5004F3565 /* TestDBManager.m in Sources */,
 				26DF2BE61DC70239000D55A0 /* DictionaryObject.m in Sources */,
+				52BE8B911DCB5EDE00B96875 /* Tab4CollectionViewCell.m in Sources */,
 				26E117791DC1CAE0004F3565 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="Tab4CollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_launcher_4" translatesAutoresizingMaskIntoConstraints="NO" id="L2u-la-Dzi"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgK-YY-Rh4">
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="L2u-la-Dzi" secondAttribute="trailing" constant="5" id="AC0-Zh-NLc"/>
+                <constraint firstItem="VgK-YY-Rh4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="36" id="GrL-cg-gVP"/>
+                <constraint firstAttribute="bottom" secondItem="L2u-la-Dzi" secondAttribute="bottom" constant="15" id="YQM-8u-OZF"/>
+                <constraint firstItem="VgK-YY-Rh4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Yjp-NR-um3"/>
+                <constraint firstAttribute="bottom" secondItem="VgK-YY-Rh4" secondAttribute="bottom" constant="2" id="ipS-6v-wo4"/>
+                <constraint firstItem="VgK-YY-Rh4" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="lHa-Af-KDh"/>
+                <constraint firstAttribute="trailing" secondItem="VgK-YY-Rh4" secondAttribute="trailing" constant="5" id="mCf-7n-RRp"/>
+                <constraint firstItem="L2u-la-Dzi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="vbM-V2-o4Q"/>
+                <constraint firstItem="L2u-la-Dzi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="w8W-pZ-uR6"/>
+            </constraints>
+            <connections>
+                <outlet property="imageView" destination="L2u-la-Dzi" id="0f7-ps-2ac"/>
+                <outlet property="title" destination="VgK-YY-Rh4" id="wAJ-pE-B6h"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ico_launcher_4" width="52" height="52"/>
+    </resources>
+</document>

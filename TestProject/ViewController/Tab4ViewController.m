@@ -8,8 +8,10 @@
 
 #import "Tab4ViewController.h"
 #import "NSString+addition.h"
+#import "Tab4CollectionViewCell.h"
+#import "TestDBManager.h"
 
-@interface Tab4ViewController (){
+@interface Tab4ViewController ()<TestCollectionDelegate, UICollectionViewDelegate, UICollectionViewDataSource>{
     NSInteger currentTag;
     IBOutlet UILabel *test4;
 }
@@ -30,7 +32,7 @@
     [super viewDidLoad];
     test4.text = [NSString stringWithFormat:@"%ld",(long)currentTag];
     
-    self.view.backgroundColor = [UIColor magentaColor];
+    self.view.backgroundColor = [UIColor lightTextColor];
     
     [self testUserDefault];
     [self testCategory];
@@ -82,6 +84,10 @@
     
     //test4.text = NSLocalizedString(@"Hello",nil );
     test4.text = NSLocalizedStringFromTable(@"Hello", @"localizaion", @"인삿말 입나다.");
+    
+}
+
+-(void) selectedCellpath:(NSIndexPath *)cellPath{
     
 }
 
