@@ -46,7 +46,8 @@
 - (BOOL)deleteWithIdx:(NSNumber*)idx;
 
 
-
+//- (NSMutableArray*)selectAllList;
+//- (NSMutableArray*)selectWithIdx:(NSNumber*)idx; //NSDictionary 를 이용해 data 저장 할 때 썼던것.
 
 - (BOOL)insertObject:(HjData *)data;
 

@@ -11,10 +11,13 @@
 #import "Tab4CollectionViewCell.h"
 #import "TestDBManager.h"
 
-@interface Tab4ViewController ()<TestCollectionDelegate, UICollectionViewDelegate, UICollectionViewDataSource>{
+@interface Tab4ViewController ()<TestCollectionCellDelegate, UICollectionViewDelegate, UICollectionViewDataSource>{
     NSInteger currentTag;
     IBOutlet UILabel *test4;
+    
+    TestDBManager *dbManager;
 }
+@property (strong,nonatomic) NSMutableArray *items;
 
 @end
 
@@ -33,6 +36,8 @@
     test4.text = [NSString stringWithFormat:@"%ld",(long)currentTag];
     
     self.view.backgroundColor = [UIColor lightTextColor];
+    
+    dbManager = [TestDBManager sharedDBManager];
     
     [self testUserDefault];
     [self testCategory];

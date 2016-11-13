@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol TestCollectionDelegate <NSObject>
+@protocol TestCollectionCellDelegate <NSObject>
 
 - (void)  selectedCellpath:(NSIndexPath *)cellPath;
 
@@ -17,5 +17,9 @@
 @interface Tab4CollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *title;
+
+@property (strong, nonatomic) NSIndexPath *path;
+
+@property (weak, nonatomic) id<TestCollectionCellDelegate>collectiondelegate;
 
 @end
