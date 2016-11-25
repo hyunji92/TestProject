@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<kr.co.samsungcard.mpocket.view.animationcardview.AnimationCardLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/point_card_border"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <ImageView
+        android:id="@+id/ivCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+</kr.co.samsungcard.mpocket.view.animationcardview.AnimationCardLayout>
+    
